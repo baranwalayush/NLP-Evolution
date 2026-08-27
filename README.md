@@ -1,6 +1,6 @@
 # NLP Through the Ages
 
-The plan is to build a project tracing the evolutions in the field of Natural Language Processing over the years with small, real implementations of each era, to show how the field has evolved from simple hand-written rules to models capable of understanding and generating human-like text.
+The plan is to build a project tracing the evolutions in the field of Natural Language Processing over the years with small, real implementations of each era, to show how the field has evolved from simple hand-written rules to models capable of understanding and generating human-like text. I'm planning to implement each era's model from scratch, train them on the same corpus (Tiny Shakespeare), where possible, with the goal of learning and understanding the underlying principles of each approach.
 
 
 | # | Era | Year(s) | What it is | Status
@@ -12,4 +12,14 @@ The plan is to build a project tracing the evolutions in the field of Natural La
 | 05 | Gated RNN | 1997/2014 | LSTM language model |
 | 06 | Attention | 2014-15 | Seq2seq + Bahdanau attention |
 | 07 | Transformer | 2017 | Decoder-only Transformer (MiniGPT) |
+
+## Repo structure
+
+```
+NLP-Evolution/
+  common/        shared char tokenizer, batching, metrics, etc.
+  data/          Tiny Shakespeare corpus (~1.1MB, public domain)
+  models/        one folder per era: model.py, train.py, infer.py
+  papers/        reading material for each era
+```
 
