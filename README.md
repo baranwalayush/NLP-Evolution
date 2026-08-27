@@ -20,6 +20,6 @@ NLP-Evolution/
   common/        shared char tokenizer, batching, metrics, etc.
   data/          Tiny Shakespeare corpus (~1.1MB, public domain)
   models/        one folder per era: model.py, train.py, infer.py
-  papers/        reading material for each era
+  docs/          reading material for each era
 ```
 
