@@ -23,3 +23,36 @@ NLP-Evolution/
   docs/          reading material for each era
 ```
 
+## Models
+
+### 1. Rule-based: ELIZA
+
+Please check [this page](docs/01_eliza/01_eliza.md) for more details on the ELIZA model, its implementation, and how it works.
+
+To run the ELIZA model, navigate to the `models/01_eliza` directory and run the following command:
+
+```bash
+python eliza.py
+```
+
+**Example conversation:**
+
+```
+ELIZA: Hello. How are you feeling today? (Type 'quit' to exit)
+YOU: I feel sad
+ELIZA: Tell me more about feeling sad.
+YOU: I can't tell
+ELIZA: What is stopping you from telling?
+YOU: because I need help   
+ELIZA: Is that the real reason?
+YOU: yes, my mother would have helped me
+ELIZA: Tell me more about your family.
+YOU: I really love them
+ELIZA: Let's explore that further.
+YOU: Why don't you tell me something
+ELIZA: Perhaps I will tell you something eventually.
+YOU: ok
+ELIZA: Can you elaborate on that?
+YOU: quit
+ELIZA: Goodbye! Take care.
+```
