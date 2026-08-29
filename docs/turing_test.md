@@ -1,0 +1,5 @@
+## Turing Test
+
+The Turing Test, proposed by Alan Turing in 1950s, is a measure of a machine's ability to exhibit intelligent behavior indistinguishable from that of a human. In the test, a human evaluator engages in natural language conversations with both a human and a machine without knowing which is which, through a text-based interface. If the evaluator cannot reliably tell the machine from the human, the machine is said to have passed the test. 
+
+One criticism of the Turing Test is that it focuses on the machine's ability to mimic human conversation rather than its actual understanding or intelligence. A machine could potentially pass the test by using clever tricks or pre-programmed responses without truly comprehending the conversation. Turing himself acknowledged this limitation, and called it the "imitation game," emphasizing that the test is more about the machine's ability to imitate human behavior rather than demonstrating genuine intelligence.
