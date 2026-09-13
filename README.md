@@ -6,7 +6,7 @@ The plan is to build a project tracing the evolutions in the field of Natural La
 | # | Era | Year(s) | What it is | Status
 |---|-----|---------|------------|---------
 | 01 | Rule-based | 1966 | ELIZA -- regex pattern matching | &#x2713;
-| 02 | Statistical ML | 1980s-90s | Character n-gram model |
+| 02 | Statistical ML | 1980s-90s | Character n-gram model | &#x2713;
 | 03 | Feedforward NN | 2003 | Bengio-style neural language model |
 | 04 | Recurrent NN | 1990s/2010s | Vanilla RNN language model |
 | 05 | Gated RNN | 1997/2014 | LSTM language model |
@@ -56,3 +56,43 @@ ELIZA: Can you elaborate on that?
 YOU: quit
 ELIZA: Goodbye! Take care.
 ```
+
+### 2. Statistical ML: N-gram model
+
+Please check [this page](docs/02_ngram/02_ngram.md) for more details on the N-gram model, its implementation, and how it works.
+
+To run the N-gram model, navigate to the `models/02_ngram` directory and run the following command:
+
+```bash
+python train.py
+``` 
+and to generate text using the trained model, run the following command:
+```bash
+python infer.py
+```
+
+**Example output** of the model with `seed` as "ROMEO:" and `length` as 400:
+
+```
+ROMEO:
+Will ming impering the of man hom outh.
+
+Nurset
+To thou or thind weedio as I shallow.
+
+MENENIUS:
+Looking to your miss that armfu;;?QoKBx-nx,cve,
+Let masters: thined, comfor with that suppetM
+
+SLY:
+Whate, you, so I acting wake talk of your not in head;
+Was rospected mous tell, your you fleepinal at onescestice you.
+
+MOND:
+Madam, and ened, fords, they
+The do to
+To riceasary's till'd beam, wher;
+And
+```
+
+The **perplexity score** of the default 4-gram model is **5.55**.
