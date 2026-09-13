@@ -50,6 +50,46 @@ and using this it can calculate the probabilities of each character following a 
 ### Smoothing in N-gram models
 Smoothing is a technique used in n-gram models to handle the problem of zero probabilities for unseen n-grams in the training data. When an n-gram is not present in the training data, the model assigns it a probability of zero, which can lead to poor performance when generating text. Smoothing techniques adjust the probabilities of n-grams to account for unseen events, ensuring that the model can still generate reasonable predictions even for n-grams that were not observed during training. Common smoothing techniques include Laplace smoothing, Good-Turing smoothing, and Kneser-Ney smoothing.
 
+### How to run the N-gram model
+To run the N-gram model, navigate to the `models/02_ngram` directory and run the following command:
+```bash
+python train.py
+```
+Default is a 4-gram model. You can change it by passing arguments to the script. For example, `python train.py 3` will train a trigram model. The model will be trained on the [`tinyshakespeare.txt`](../../data/tinyshakespeare.txt) dataset and saved as `ngram.pkl`. You can also change the dataset by modifying the `DATA_PATH` variable in `train.py`.
+
+To generate text using the trained model, run the following command:
+```bash
+python infer.py
+```
+Default `seed` is "ROMEO:" and `length` is 400. You can change these values by passing arguments to the script. For example, `python infer.py "JULIET:" 500` will generate 500 characters of text starting with "JULIET:". The `seed` is the initial string to start the generation and `length` is the desired length of the generated text.
+
+### Results
+The perplexity score of the default 4-gram model is 5.55.
+Example output of the model with `seed` as "ROMEO:" and `length` as 400:
+```
+ROMEO:
+Will ming impering the of man hom outh.
+
+Nurset
+To thou or thind weedio as I shallow.
+
+MENENIUS:
+Looking to your miss that armfu;;?QoKBx-nx,cve,
+Let masters: thined, comfor with that suppetM
+
+SLY:
+Whate, you, so I acting wake talk of your not in head;
+Was rospected mous tell, your you fleepinal at onescestice you.
+
+MOND:
+Madam, and ened, fords, they
+The do to
+To riceasary's till'd beam, wher;
+And
+```
+
+The results are not deterministic and will vary with each run. You can also try different `seed` values to see how the model generates text based on different contexts. As it can be seen, the model is able to generate text that resembles Shakespearean language, but it may not always produce coherent or meaningful sentences. This is a limitation of n-gram models, as they do not have a deep understanding of language and rely solely on statistical patterns in the training data.
+
 
 
 
