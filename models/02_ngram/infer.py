@@ -11,4 +11,5 @@ def generate(seed: str = "\n", length: int = 300) -> str:
 
 if __name__ == "__main__":
     seed = sys.argv[1] if len(sys.argv) > 1 else "ROMEO:"
-    print(generate(seed=seed, length=400))
+    length = int(sys.argv[2]) if len(sys.argv) > 2 else 400
+    print(generate(seed=seed, length=length))
