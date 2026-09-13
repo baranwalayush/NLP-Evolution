@@ -56,6 +56,7 @@ class NgramLM:
         for _ in range(length):
             weights = [self.prob(context, c) for c in self.vocab]
             next_char = random.choices(self.vocab, weights=weights, k=1)[0]
+            # next_char = max(self.vocab, key=lambda c: self.prob(context, c)) # in case of 
             out += next_char
             context = (context + next_char)[-(self.n - 1):]
         return out
