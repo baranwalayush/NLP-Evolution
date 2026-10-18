@@ -219,3 +219,9 @@ __marimo__/
 
 # Pickled files
 *.pkl
+
+# Toknizers
+tokenizer.json
+
+# Model Weights
+*.pt
