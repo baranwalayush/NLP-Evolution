@@ -7,7 +7,7 @@ The plan is to build a project tracing the evolutions in the field of Natural La
 |---|-----|---------|------------|---------
 | 01 | Rule-based | 1966 | ELIZA -- regex pattern matching | &#x2713;
 | 02 | Statistical ML | 1980s-90s | Character n-gram model | &#x2713;
-| 03 | Feedforward NN | 2003 | Bengio-style neural language model |
+| 03 | Feedforward NN | 2003 | Bengio-style neural language model | &#x2713;
 | 04 | Recurrent NN | 1990s/2010s | Vanilla RNN language model |
 | 05 | Gated RNN | 1997/2014 | LSTM language model |
 | 06 | Attention | 2014-15 | Seq2seq + Bahdanau attention |

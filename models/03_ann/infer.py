@@ -12,7 +12,7 @@ TOK_PATH = os.path.join(os.path.dirname(__file__), "tokenizer.json")
 CONTEXT_SIZE = 8
 
 
-def generate(seed: str = "ROMEO:", length: int = 300) -> str:
+def generate(seed: str = "ROMEO:", length: int = 400) -> str:
     tok = CharTokenizer.load(TOK_PATH)
     model = FeedforwardLM(tok.vocab_size, context_size=CONTEXT_SIZE)
     model.load_state_dict(torch.load(CKPT_PATH, map_location="cpu"))
@@ -21,4 +21,5 @@ def generate(seed: str = "ROMEO:", length: int = 300) -> str:
 
 if __name__ == "__main__":
     seed = sys.argv[1] if len(sys.argv) > 1 else "ROMEO:"
-    print(generate(seed=seed, length=400))
+    length = int(sys.argv[2]) if len(sys.argv) > 2 else 400
+    print(generate(seed=seed, length=length))
