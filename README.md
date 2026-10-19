@@ -27,7 +27,7 @@ NLP-Evolution/
 
 ### 1. Rule-based: ELIZA
 
-Please check [this page](docs/01_eliza/01_eliza.md) for more details on the ELIZA model, its implementation, and how it works.
+Please check [01_eliza.md](docs/01_eliza/01_eliza.md) for more details on the ELIZA model, its implementation, and how it works.
 
 To run the ELIZA model, navigate to the `models/01_eliza` directory and run the following command:
 
@@ -59,7 +59,7 @@ ELIZA: Goodbye! Take care.
 
 ### 2. Statistical ML: N-gram model
 
-Please check [this page](docs/02_ngram/02_ngram.md) for more details on the N-gram model, its implementation, and how it works.
+Please check [02_ngram.md](docs/02_ngram/02_ngram.md) for more details on the N-gram model, its implementation, and how it works.
 
 To run the N-gram model, navigate to the `models/02_ngram` directory and run the following command:
 
@@ -96,3 +96,37 @@ And
 ```
 
 The **perplexity score** of the default 4-gram model is **5.55**.
+
+### 3. Feedforward Neural Network: Bengio-style neural language model
+
+Please check [03_ann.md](docs/03_ann/03_ann.md) for more details on the Feedforward Neural Network, its implementation, and how it works.
+
+To run the ANN model, navigate to the `models/03_ann` directory and run the following command:
+
+```bash
+python train.py
+```
+and to generate text using the trained model, run the following command:
+```bash
+python infer.py
+``` 
+
+Example output of the model with `seed` as "ROMEO:" and `length` as 400:
+
+```
+ROMEO:
+Onot farm, ochergin faslld,
+Of have in miphan
+so, that bagrie surspiod feel pliningly, woth had ceabinin? whise wind bery the ppain, stars?
+Oll kneet, my hamts o spot yuis de ware.
+
+MENRUCIO:
+Weruun it peirigh.
+
+Narsing cours sidvor sice ambrase forited; it gaire a pined
+his, lor!
+
+Satp hands idn h
+```
+
+The **validation perplexity score** of the model is **6.73**. Your output may vary slightly due to the stochastic nature of the training process.
