@@ -1,0 +1,3 @@
+## Recurrent Neural Networks (RNNs) for Natural Language Processing
+
+Unlike feedforward neural networks, with limited context windows, Recurrent Neural Networks (RNNs) are designed to handle sequential data and capture long-range dependencies in the input. RNNs maintain a hidden state that is updated at each time step based on the current input and the previous hidden state, allowing them to retain information from earlier time steps and use it to inform predictions at later time steps. This makes RNNs particularly well-suited for tasks involving sequences, such as language modeling, machine translation, and speech recognition.
